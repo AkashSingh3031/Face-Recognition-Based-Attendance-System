@@ -9,6 +9,7 @@ import tkinter as tk
 from tkinter import Message, messagebox, Text
 import tkinter.ttk as ttk
 import tkinter.font as font
+from playsound import playsound
 import cv2
 import os
 import random
@@ -213,7 +214,9 @@ def TakeImages():
             message.configure(text= res)
     
 def TrainImages():
-    recognizer = cv2.face_LBPHFaceRecognizer.create()#recognizer = cv2.face.LBPHFaceRecognizer_create()#$cv2.createLBPHFaceRecognizer()
+    recognizer = cv2.face_LBPHFaceRecognizer.create()
+    #recognizer = cv2.face.LBPHFaceRecognizer_create()
+    #cv2.createLBPHFaceRecognizer()
     harcascadePath = "haarcascade_frontalface_default.xml"
     detector =cv2.CascadeClassifier(harcascadePath)
     faces,Id = getImagesAndLabels("TrainingImage")
@@ -291,6 +294,7 @@ def TrackImages():
     #print(attendance)
     res=attendance
     message2.configure(text= res)
+    playsound('sound.mp3')
 
   
 clearButton = tk.Button(window, text="Clear", command=clear  ,fg="red"  ,bg="yellow"  ,width=20  ,height=2 ,activebackground = "Red" ,font=('times', 15, ' bold '))
