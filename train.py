@@ -90,7 +90,7 @@ frame3.place(relx=0.52, rely=0.09, relwidth=0.09, relheight=0.07)
 frame4 = tk.Frame(window, bg="#c4c6ce")
 frame4.place(relx=0.36, rely=0.09, relwidth=0.16, relheight=0.07)
 
-datef = tk.Label(frame4, text = day+"-"+mont[month]+"-"+year+"  | ", fg="orange",bg="#262523",width=55 ,height=1,font=('times', 22, ' bold '))
+datef = tk.Label(frame4, text = day+"-"+mont[month]+"-"+year+"  | ", fg="orange",bg="#262523",width=55 ,height=1,font=('times', 18, ' bold '))
 datef.pack(fill='both',expand=1)
 
 clock = tk.Label(frame3,fg="orange",bg="#262523" ,width=55 ,height=1,font=('times', 22, ' bold '))
@@ -103,7 +103,7 @@ message3.place(x=200, y=20)
 # message = tk.Label(window, text="Face-Recognition-Based-Attendance-Management-System" ,bg="Green"  ,fg="white"  ,width=50  ,height=3,font=('times', 30, 'italic bold underline'))
 # message.place(x=200, y=20)
 
-lbl = tk.Label(window, text="Enter ID",width=20  ,height=2  ,fg="red"  ,bg="yellow" ,font=('times', 15, ' bold ') ) 
+lbl = tk.Label(window, text="Enter ID", width=20  ,height=2  ,fg="red"  ,bg="yellow" ,font=('times', 15, ' bold ') )
 lbl.place(x=400, y=200)
 
 txt = tk.Entry(window,width=20  ,bg="yellow" ,fg="red",font=('times', 15, ' bold '))
@@ -316,7 +316,7 @@ quitWindow = tk.Button(window, text="Quit", command=window.destroy  ,fg="red"  ,
 quitWindow.place(x=1100, y=500)
 
 def function5():    
-   os.startfile(os.getcwd()+"/developers/diet1frame1first.html");
+   os.startfile(os.getcwd()+"/developers/diet1frame1first.html")
 about = tk.Button(window,text="Developer",font=('times new roman',40),bg="green",fg="red",activebackground = "Red", command=function5)
 about.place(x=1100, y=750)
 
